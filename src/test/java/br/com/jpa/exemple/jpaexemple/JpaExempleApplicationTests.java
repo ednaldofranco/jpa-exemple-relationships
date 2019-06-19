@@ -15,7 +15,6 @@ public class JpaExempleApplicationTests {
 	@Autowired
 	private PessoaRepository pessoaRepository;
 
-
 	@Test
 	public void contextLoads() {
 	}
@@ -53,7 +52,8 @@ public class JpaExempleApplicationTests {
 		emprego3.setNome("MAGAZINE LUIZA");
 		pessoa.addTrabalho(emprego3);
 
-        this.pessoaRepository.save(pessoa);
+		this.pessoaRepository.save(pessoa);
+
 	}
 
 }
