@@ -62,9 +62,6 @@ public class Pessoa {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
-        if (this.endereco != null) {
-            this.endereco.setPessoa(this);
-        }
     }
 
     public Endereco getEndereco() {
