@@ -13,14 +13,14 @@ public class Pessoa {
 
     private String nome;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "id_endereco")
     private Endereco endereco;
 
-    @OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "pessoa")
     private List<Telefone> telefones;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     @JoinTable(name = "trabalhos_pessoas",
         joinColumns={@JoinColumn(name = "id_pessoa")},
         inverseJoinColumns = {@JoinColumn(name="id_trabalhos")}
